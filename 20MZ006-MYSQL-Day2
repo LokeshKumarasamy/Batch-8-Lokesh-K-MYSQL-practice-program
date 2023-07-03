@@ -1,0 +1,21 @@
+create database hey;
+create table employee(emp_id int,e_name text,e_salary int,e_description text);
+insert into employee values
+(1,"Mr.Pravin",400000,"HR"),
+(1,"Mr.Gokul",450000,"HR"),
+(1,"Jeeva.V",250000,"Manager"),
+(1,"Jeeva.M",250000,"Manager"),
+(1,"Vichu",250000,"Manager"),
+(1,"Amman",200000,"Admin"),
+(1,"Radhika",200000,"Admin"),
+(1,"Sekar",200000,"Admin"),
+(1,"Ram",40000,"emp"),
+(1,"bbb",40000,"emp");
+select *from employee where e_name like 'A%';
+select *from employee where e_name like'R%a';
+select *from employee where e_name like '%r';
+select *from employee where e_name like '%i%';
+select *from employee where e_name like '_m%';
+SELECT*FROM employee ORDER by e_salary asc;
+SELECT*FROM employee ORDER by e_salary desc;
+SELECT*FROM employee ORDER by e_salary ;

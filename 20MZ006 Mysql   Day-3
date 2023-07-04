@@ -1,0 +1,35 @@
+create database BooksDB;
+create table Books (
+   s_no int,
+   title varchar(50),
+   author varchar(50),
+   genre varchar(50),
+   publication_year int,
+   price int);
+insert into Books value
+  (1,"god of small things","arundhati roy","female",1960,300),
+  (2,"wings of fire","APJ abdul kalam","male",1999,345),
+  (3,"train to pakistan","khushwant singh","male",1956,320),
+  (4,"the guide","rk narayanan","male",1958,340),
+  (5,"himalayan blunder","brigadier john dalvi","male",1962,365);
+select * from Books;
+select * from Books order by title;
+update Books 
+set price=380 
+where s_no=1;
+delete from Books where s_no=2;
+create table Authors (
+   sno int,
+   name varchar(50),
+   native varchar(50),
+   s_no int);
+ insert into Authors values
+   (01,"arudhati roy","india",1),
+   (02,"APJ abdul kalam","india",2),
+   (03,"Khushwant singh","india",3),
+   (04,"rk narayanan","india",4),
+   (05,"brigadier john dalvi","india",5);
+ select * from Authors;
+ select Books.s_no,Books.title,Books.author,Books.publication_year,Books.price from Books
+ inner join Authors
+ on Books.s_no=Authors.s_no order by s_no;
